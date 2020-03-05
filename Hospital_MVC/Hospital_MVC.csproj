@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lab_62_Hospital_API\Hospital_API.csproj" />
+    <ProjectReference Include="..\Hospital_API\Hospital_API.csproj" />
   </ItemGroup>
 
 
