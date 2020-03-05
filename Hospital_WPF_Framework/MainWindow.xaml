@@ -1,0 +1,44 @@
+﻿<Window x:Class="lab_62_Hospital_WPF_Framework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_62_Hospital_WPF_Framework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="505.132" Width="858.113">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="row01" Height="*"></RowDefinition>
+            <RowDefinition x:Name="row02" Height="*"></RowDefinition>
+            <RowDefinition x:Name="row03" Height="*"></RowDefinition>
+            <RowDefinition x:Name="row04" Height="*"></RowDefinition>
+            <RowDefinition x:Name="row05" Height="*"></RowDefinition>
+            <RowDefinition x:Name="row06" Height="*"></RowDefinition>
+            <RowDefinition x:Name="row07" Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="column01" Width="*"></ColumnDefinition>
+            <ColumnDefinition x:Name="column02" Width="*"></ColumnDefinition>
+            <ColumnDefinition x:Name="column03" Width="*"></ColumnDefinition>
+            <ColumnDefinition x:Name="column04" Width="*"></ColumnDefinition>
+            <ColumnDefinition x:Name="column05" Width="*"></ColumnDefinition>
+            <ColumnDefinition x:Name="column06" Width="*"></ColumnDefinition>
+            <ColumnDefinition x:Name="column07" Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="HeaderLabel" Content="Hospital Database" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="7" FontWeight="DemiBold" FontSize="40"></Label>
+        <Label x:Name="PatientsLabel" Content="Patients" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontWeight="DemiBold" FontSize="30"></Label>
+        <Button x:Name="PatientsButton" Content="Get Patients" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" FontWeight="DemiBold" FontSize="18" Click="PatientsButton_Click"></Button>
+        <ListView x:Name="ListViewPatients" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="#8CB2FF" 
+                  SelectionChanged="ListViewPatients_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="Column01" Header="ID" DisplayMemberBinding="{Binding PatientId}" Width="30"/>
+                    <GridViewColumn x:Name="Column02" Header="Name" DisplayMemberBinding="{Binding PatientName}" Width="120"/>
+                    <GridViewColumn x:Name="Column03" Header="D.O.B" DisplayMemberBinding="{Binding DOB}" Width="45"/>
+                    <GridViewColumn x:Name="Column04" Header="DoctorID" DisplayMemberBinding="{Binding DoctorId}" Width="70"/>
+                    <GridViewColumn x:Name="Column05" Header="DoctorName" DisplayMemberBinding="{Binding DoctorName}" Width="70"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
